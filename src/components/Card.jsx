@@ -33,29 +33,36 @@ const Card = ({loadingData, showData, weather, forecast}) => {
         <div className="mt-5"> 
             {
                 showData === true && (
-                    <div className='cardContainer'>
-
-                        <div className='left'>
-                            <div>
-                                <span className='hora'>{hora}</span>
-                                <span className='ampm' >{am_pm}</span>
+                    <>
+                        <div className='cardContainer'>
+                            
+                            <div className='left'>
+                                <div>
+                                    <span className='hora'>{hora}</span>
+                                    <span className='ampm' >{am_pm}</span>
+                                </div>
+                                <p className='city'>{weather.name}</p>
+                                <p className='date'>{today.toDateString()} </p>
                             </div>
-                            <p className='city'>{weather.name}</p>
-                            <p className='date'>{today.toDateString()} </p>
+
+                            <div className='right'>
+                                <div>
+                                    <img className='weatherImg' src={iconUrl} alt="weather ico" />
+                                </div>
+                                <p className='centigrados'><strong>{(weather.main.temp - 273.15).toFixed()}°C</strong> </p>
+                                <p className='description'>
+                                    {weather.weather[0].description}
+                                </p>
+                            </div>
                         </div>
 
-                        <div className='right'>
+                        <div className='cityContainer'>
+                            <img className='imageCity' src="city.png" alt="" />
                             <div>
-                                <img className='weatherImg' src={iconUrl} alt="weather ico" />
+                                
                             </div>
-                            <p className='centigrados'><strong>{(weather.main.temp - 273.15).toFixed()}°C</strong> </p>
-                            <p className='description'>
-                                {weather.weather[0].description}
-                            </p>
                         </div>
-
-
-                    </div>
+                    </>
                 )
             }
         </div>

@@ -1,12 +1,12 @@
 *{
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 .App {
   background-color: antiquewhite;
-  color: aliceblue;
+  color: white;
 }
 
 .cardContainer{
@@ -27,7 +27,6 @@
   display: flex;
   flex-direction: column;
   text-align: right;
-  justify-content:space-between;
 }
 
 .cardContainer .right .weatherImg{
@@ -35,7 +34,27 @@
   height: 50px;
 }
 
+.cityContainer{
+  background-color: #2F3544;
+  width: 360px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cityContainer img{
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  width: 280px;
+  height: 300px;
+}
+
 @media screen and (max-width: 360px) {
+  .cardContainer{
+    height: 200px;
+  }
   .cardContainer .right{
     text-align: right;
     padding-right: 20px;
