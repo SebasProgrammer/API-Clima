@@ -54,6 +54,10 @@ h3{
 
 @media screen and (max-width: 460px) {
 
+  .input-group{
+    width: 350px;
+  }
+
   .cardContainer{
     /* background-color: antiquewhite; */
     background-color: #2F3544;
