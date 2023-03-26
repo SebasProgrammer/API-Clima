@@ -33,36 +33,35 @@ const Card = ({loadingData, showData, weather, forecast}) => {
         <div className="mt-5"> 
             {
                 showData === true && (
-                    <>
-                        <div className='cardContainer'>
-                            
-                            <div className='left'>
-                                <div>
-                                    <span className='hora'>{hora}</span>
-                                    <span className='ampm' >{am_pm}</span>
-                                </div>
-                                <p className='city'>{weather.name}</p>
-                                <p className='date'>{today.toDateString()} </p>
+                    <div className='cardContainer'>
+                        
+                        <div className='left'>
+                            <div>
+                                <span className='hora'>{hora}</span>
+                                <span className='ampm' >{am_pm}</span>
                             </div>
+                            <p className='city'>{weather.name}</p>
+                            <p className='date'>{today.toDateString()} </p>
+                        </div>
 
-                            <div className='right'>
-                                <div>
-                                    <img className='weatherImg' src={iconUrl} alt="weather ico" />
-                                </div>
-                                <p className='centigrados'><strong>{(weather.main.temp - 273.15).toFixed()}°C</strong> </p>
-                                <p className='description'>
-                                    {weather.weather[0].description}
-                                </p>
+                        <div className='right'>
+                            <div>
+                                <img className='weatherImg' src={iconUrl} alt="weather icon" />
                             </div>
+                            <p className='centigrados'><strong>{(weather.main.temp - 273.15).toFixed()}°C</strong> </p>
+                            <p className='description'>
+                                {weather.weather[0].description}
+                            </p>
                         </div>
 
                         <div className='cityContainer'>
-                            <img className='imageCity' src="city.png" alt="" />
-                            <div>
-                                
-                            </div>
+                            <h2 className='card-title'>{weather.name}</h2>
+                            <img className='imageCity' src="cityPhoto.png" alt="" />
+
                         </div>
-                    </>
+
+                    </div>
+
                 )
             }
         </div>

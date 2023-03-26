@@ -7,41 +7,15 @@
 .App {
   background-color: antiquewhite;
   color: white;
+  height: 100vh;
 }
 
-.cardContainer{
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+h3{
+  margin: 60px;
 }
 
-.cardContainer .left{
-  flex-basis: 50%;
-  display: flex;
-  flex-direction: column;
-}
-
-.cardContainer .right{
-  flex-basis: 50%;
-  display: flex;
-  flex-direction: column;
-  text-align: right;
-}
-
-.cardContainer .right .weatherImg{
-  width: 50px;
-  height: 50px;
-}
-
-.cityContainer{
-  background-color: #2F3544;
-  width: 360px;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.input-group{
+  width: 500px;
 }
 
 .cityContainer img{
@@ -51,20 +25,81 @@
   height: 300px;
 }
 
-@media screen and (max-width: 360px) {
+.cardContainer{
+  background-color: #2F3544;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content:center;
+  margin: 0 50px;
+  height: 400px;
+}
+
+.cardContainer .left,
+.cardContainer .right,
+.cityContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+}
+
+.card-title{
+  position: absolute;
+  padding: 20px;
+}
+
+@media screen and (max-width: 460px) {
+
   .cardContainer{
-    height: 200px;
-  }
-  .cardContainer .right{
-    text-align: right;
-    padding-right: 20px;
+    /* background-color: antiquewhite; */
+    background-color: #2F3544;
+    margin: 0;
   }
 
-  .cardContainer .left{
-    align-items: left;
-    padding-left: 20px;
+  .cityContainer{
+    position: relative;
+    top: 20px;
   }
-  
+
+  .cityContainer img{
+    width: 240px;
+    height: 260px;
+  }
+
+  .hora{
+    font-size: 45px;
+    color: aliceblue;
+    
+  }
+  .ampm,
+  .city,
+  .date,
+  .description{
+    font-size: 17px;
+    color: aliceblue;
+  }
+}
+
+@media screen and (max-width: 750px) {
+
+  .cardContainer{
+    background-color: antiquewhite;  
+  }
+
+  .right,
+  .left{
+    width: 50%;
+  }
+
+  .cityContainer{
+    position: relative;
+    top: 30px;
+  }
+
   .hora{
     font-size: 45px;
     color: aliceblue;
@@ -78,8 +113,46 @@
     color: aliceblue;
   }
 
+  .right img{
+    width: 60px;
+  }
+
   .centigrados{
-    font-size: 25px;
+    font-size: 23px;
   }
 
 }
+
+@media screen and (min-width: 750px) {
+  .hora{
+    font-size: 45px;
+    color: aliceblue;
+    
+  }
+  .ampm,
+  .city,
+  .date,
+  .description{
+    font-size: 17px;
+    color: aliceblue;
+  }
+
+  .right img{
+    width: 60px;
+  }
+
+  .centigrados{
+    font-size: 23px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .cardContainer{
+    padding: 0;
+    margin: 0;
+    
+  }
+}
+
+
+
